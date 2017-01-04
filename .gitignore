@@ -45,14 +45,10 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
-.NET Core/1. Core/DAL/obj/Debug/netstandard1.4/DAL.AssemblyInfo.cs
-.NET Core/1. Core/DAL/obj/DAL.csproj.nuget.g.targets
-.NET Core/1. Core/DAL/obj/Debug/netstandard1.4/TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs
-.NET Core/1. Core/DAL/obj/Debug/netstandard1.4/TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs
-.NET Core/1. Core/DAL/obj/Debug/netstandard1.4/TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs
-.NET Framework/1. Core/DAL/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
-.NET Framework/1. Core/DAL/obj/Debug/TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs
-.NET Framework/1. Core/DAL/obj/Debug/TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs
-.NET Core/1. Core/DAL/obj/DAL.csproj.nuget.g.props
-.NET Core/1. Core/DAL/obj/project.assets.json
-.NET Framework/1. Core/DAL/obj/Debug/TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs
+packages
+.NET Core/1. Core/DAL/obj/
+.NET Core/1. Core/DAL/bin/
+.NET Framework/1. Core/DAL/obj/
+.NET Framework/1. Core/DAL/bin/
+.NET Framework/0. Common/CoreProject.Common/obj/
+.NET Framework/0. Common/CoreProject.Common/bin/
