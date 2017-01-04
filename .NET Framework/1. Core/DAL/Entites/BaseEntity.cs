@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -22,7 +23,7 @@ namespace DAL.Entites
         
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [CustomColumn("id", Order = 1)]
-        public virtual int Id { get; set; }
+        public virtual long Id { get; set; }
 
         #region Common properties
         
@@ -32,11 +33,11 @@ namespace DAL.Entites
         
         [CustomColumn("created_on")]
         [Display(Name = "Created Date")]
-        public virtual DateTime CreatedDate { get; set; }
+        public virtual DateTime? CreatedDate { get; set; }
         
         [CustomColumn("updated_on")]
         [Display(Name = "Updated Date")]
-        public virtual DateTime UpdatedDate { get; set; }
+        public virtual DateTime? UpdatedDate { get; set; }
         
         [MaxLength(100)]
         [CustomColumn("created_by")]
@@ -49,5 +50,7 @@ namespace DAL.Entites
         public virtual string UpdatedBy { get; set; }
 
         #endregion Common properties
+        
+        public abstract Expression<Func<T, bool>> SetSecuredCondition<T>() where T : BaseEntity;
     }
 }
