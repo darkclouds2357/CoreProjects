@@ -62,10 +62,12 @@
     <Compile Include="Attributes\CustomTableAttribute.cs" />
     <Compile Include="Entites\BaseEntity.cs" />
     <Compile Include="Entites\FluentMigratorParams.cs" />
+    <Compile Include="Entites\Interface\ICurrentUser.cs" />
     <Compile Include="Entites\Interface\IDbContext.cs" />
     <Compile Include="Helpers\LinqHelper.cs" />
     <Compile Include="IDependency.cs" />
     <Compile Include="InMemoryUnitTest\InMemoryRepository.cs" />
+    <Compile Include="InMemoryUnitTest\InMemoryUnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\Extension\RepositoryExtension.cs" />
     <Compile Include="Repositories\Interface\IRepository.cs" />
