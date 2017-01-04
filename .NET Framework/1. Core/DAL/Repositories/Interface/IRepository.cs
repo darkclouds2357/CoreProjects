@@ -12,19 +12,19 @@ namespace DAL.Repositories
 {
     public interface IRepository<T>
     {
-        int Insert(T entity);
+        void Insert(T entity);
 
-        int Update(T entity);
+        void Update(T entity);
 
         void Attach(T entity, EntityState state = EntityState.Unchanged);
 
-        int Delete(T entity);
+        void Delete(T entity);
 
-        int DeleteRange(IEnumerable<T> items);
+        void DeleteRange(IEnumerable<T> items);
 
-        int DeleteRange(Expression<Func<T, bool>> criteria);
+        void DeleteRange(Expression<Func<T, bool>> criteria);
 
-        int SoftDelete(T entity);
+        void SoftDelete(T entity);
 
         T FindOne(Expression<Func<T, bool>> criteria);
 

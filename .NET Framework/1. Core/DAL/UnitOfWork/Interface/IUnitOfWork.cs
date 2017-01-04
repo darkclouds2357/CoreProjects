@@ -18,24 +18,24 @@ namespace DAL.UnitOfWork
 
         void CommitTransaction();
 
-        DbContext Context { get; }
+        //DbContext Context { get; }
 
-        Database Database { get; }
+        //Database Database { get; }
 
         IRepository<TEntity> GetRepository<TEntity>(bool isLazyLoadingEnabled = true) where TEntity : BaseEntity;
 
-        IQueryable<TEntity> ExecWithFunction<TEntity>(string sqlQuery, params object[] parameters) where TEntity : BaseEntity;
+        IQueryable<TEntity> ExecWithFunction<TEntity>(string sqlQuery, params object[] parameters) where TEntity : class;
 
         int ExecWithStoreProcedure(string query, params object[] parameters);
 
-        IList<TEntity> ExecWithStoreProcedureWithCommand<TEntity>(string query, params object[] parameters) where TEntity : BaseEntity;
+        IList<TEntity> ExecWithStoreProcedureWithCommand<TEntity>(string query, params object[] parameters) where TEntity : class;
 
         SqlConnection GetSqlConnection();
 
         IEnumerable<DbEntityEntry<TEntity>> ChangeTracker<TEntity>() where TEntity : BaseEntity;
 
-        bool SaveAndReload<T>(T entity) where T : BaseEntity;
+        int SaveAndReload<TEntity>(TEntity entity) where TEntity : BaseEntity;
 
-        bool Save();
+        int Save();
     }
 }
