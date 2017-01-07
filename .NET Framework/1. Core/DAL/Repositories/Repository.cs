@@ -66,7 +66,7 @@ namespace DAL.Repositories
         
         #region Properties
         public Action<T> OnChange { get; set; }
-
+        public Type EntityType => _entityType;
         #endregion
 
         #region Insert/Update/Delete

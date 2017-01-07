@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Repositories
 {
-    public interface IRepository<T>
+    public interface IRepository<T>: IBaseRepository
     {
         void Insert(T entity);
 
@@ -61,7 +61,7 @@ namespace DAL.Repositories
         bool HasChange();
 
         Action<T> OnChange { get; set; }
-
+        
         //int ExecWithStoreProcedure(string query, params object[] parameters);
 
         //IList<T> ExecWithStoreProcedureWithCommand(string query, params object[] parameters);

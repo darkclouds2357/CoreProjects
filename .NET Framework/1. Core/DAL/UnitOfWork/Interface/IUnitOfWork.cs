@@ -10,7 +10,7 @@ using System.Linq;
 
 namespace DAL.UnitOfWork
 {
-    public interface IUnitOfWork
+    public interface IUnitOfWork: IDependency
     {
         IDisposable BeginTransaction(IsolationLevel isolationLevel = IsolationLevel.ReadCommitted);
 
